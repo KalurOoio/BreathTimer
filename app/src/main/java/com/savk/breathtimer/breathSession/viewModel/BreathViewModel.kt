@@ -28,9 +28,11 @@ class BreathViewModel {
             }
 
             override fun onFinish() {
-
+                listener?.setStartEnabled(true)
             }
         }
+        timer?.start()
+        listener?.setStartEnabled(false)
 
     }
 
